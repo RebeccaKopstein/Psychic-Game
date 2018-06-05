@@ -5,32 +5,36 @@ var losses = 0;
 var YourGuesses = [];
 var counter = 9;
 
+
+
 var computerGuess = computerChoices[Math.floor(Math.random() * computerChoices.length)];
 
-// I was trying to figure out how to reset the game after 9 guesses had been made
-
-// var reset = function(userGuess) {
-//     YourGuesses = [];
-//     counter = 9;   
-// }
 
 document.onkeyup = function (event) {
     var userGuess = event.key.toLowerCase();
-
-
 
     if (computerChoices.indexOf(userGuess) >= 0) {
 
         YourGuesses.push(userGuess)
 
         if (userGuess === computerGuess) {
-            wins++
+            wins++;
+            counter = 9; 
+            YourGuesses = [];
             alert("BAZINGA! You guessed it, the correct letter was " + computerGuess);
         }
         else if (userGuess !== computerGuess) {
             counter--;
             losses++;
         }
+
+        if(counter === 0) {
+            counter = 9;
+            losses++;
+            YourGuesses = [];
+        }
+
+    
 
         var html =
             "" +
