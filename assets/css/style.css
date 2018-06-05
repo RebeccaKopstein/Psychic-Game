@@ -1,0 +1,28 @@
+body{
+    background: url("../images/pexels.jpeg")
+}
+
+h1,
+h3,
+p{
+    color: rgb(248, 247, 247);
+    font-family: 'Pathway Gothic One', sans-serif;
+}
+
+
+h1 {
+    font-size: 60px;
+}
+
+h3{
+    font-size: 40px;
+}
+
+p{
+    font-size: 30px;
+    color: rgb(28, 10, 61);
+}
+
+#container {
+    padding: 170px;
+}
