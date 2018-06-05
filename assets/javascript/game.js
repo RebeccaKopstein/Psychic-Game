@@ -7,10 +7,12 @@ var counter = 9;
 
 var computerGuess = computerChoices[Math.floor(Math.random() * computerChoices.length)];
 
-var reset = function(userGuess) {
-    YourGuesses = [];
-    counter = 9;   
-}
+// I was trying to figure out how to reset the game after 9 guesses had been made
+
+// var reset = function(userGuess) {
+//     YourGuesses = [];
+//     counter = 9;   
+// }
 
 document.onkeyup = function (event) {
     var userGuess = event.key.toLowerCase();
