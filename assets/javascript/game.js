@@ -25,7 +25,7 @@ document.onkeyup = function (event) {
         }
         else if (userGuess !== computerGuess) {
             counter--;
-            losses++;
+            // losses++;
         }
 
         if(counter === 0) {
